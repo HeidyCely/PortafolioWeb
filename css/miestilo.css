@@ -1,0 +1,304 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  margin: auto;
+}
+/* The side navigation menu */
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    right: 0;
+    background-color: #E0B127; /* Yellow*/
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+}
+ 
+/* The navigation menu links */
+.sidenav a {
+    font-family: 'Poppins', sans-serif;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color:#ffffff;
+    display: block;
+    transition: 0.3s
+}
+ 
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #662D91;
+}
+ 
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-right: 60px;
+}
+ 
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-right .5s;
+    padding: 20px;
+    overflow:hidden;
+    width:100%;
+}
+body {
+  overflow-x: hidden;
+}
+ 
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #E0B127;
+    overflow: hidden;
+}
+ 
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: right;
+    display: block;
+    color: #E0B127;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+ 
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #E0B127;
+    color: black;
+}
+ 
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #E0B127;
+    color: white;
+}
+ 
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+ 
+a svg{
+  transition:all .5s ease;
+ 
+  &:hover{
+    #transform:rotate(180deg);
+  }
+}
+ 
+#ico{
+  display: none;
+}
+ 
+.menu{
+  background: #000;
+  display: none;
+  padding: 5px;
+  width: 320px;
+  @include border-radius(5px);
+ 
+  #transition: all 0.5s ease;
+ 
+  a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 2px;
+    margin: 3px 0;
+    text-decoration: none;
+    background: #444;
+ 
+    &:nth-child(1){
+      margin-top: 0;
+      @include border-radius(3px 3px 0 0 );
+    }
+    &:nth-child(5){
+      margin-bottom: 0;
+      @include border-radius(0 0 3px 3px);
+    }
+ 
+    &:hover{
+      background: #555;
+    }
+  }
+}
+
+h1{
+  color: #662D91;
+  font-family: 'Poppins', sans-serif;
+}
+h2{
+  color: #662D91;
+  font-family: 'Poppins', sans-serif;
+}
+h3{
+  color: #E0B127;
+  font-family: 'Poppins', sans-serif;
+}
+p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 25px;
+}
+.caja1{
+padding:15px 15px 15px 15px;
+background:#E0B127;
+color: #ffffff;
+border-radius: 35px 35px 35px 35px;
+}
+h4{
+  font-family: 'Poppins', sans-serif;
+}
+.pepe{
+  margin-top: 0px; 
+}
+.etesech{
+  margin-bottom: 25px;
+}
+.contacto{
+padding:15px 15px 15px 15px;
+background:#662D91;
+color: #ffffff;
+}
+h5{
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+.pinche{
+  text-align: right;
+}
+.sandra{
+  text-align: center;
+}
+.jiji{
+  display: flex;
+  justify-content: space-around;
+}
+<style>
+  rm {
+  /* Centrar el formulario en la página */
+  margin: 10px ;
+  width: 400px;
+  /* Esquema del formulario */
+  padding: 1em;
+  border: 1px solid #000000;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Tamaño y alineación uniforme */
+  display: inline-flex;
+  width: 90px;
+  text-align: left;
+}
+
+input, 
+textarea {
+  /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
+     Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
+  font: 1em sans-serif;
+  font-family: 'Poppins', sans-serif;
+
+  /* Tamaño uniforme del campo de texto */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Hacer coincidir los bordes del campo del formulario */
+  border: 1px solid #000;
+}
+
+input:focus, 
+textarea:focus {
+  /* Destacado adicional para elementos que tienen el cursor */
+  border-color: #000;
+}
+
+textarea {
+  /* Alinear los campos de texto multilínea con sus etiquetas */
+  vertical-align: top;
+
+  /* Proporcionar espacio para escribir texto */
+  height: 5em;
+}
+
+.button {
+  /* Alinear los botones con los campos de texto */
+  padding-left: 90px; /* mismo tamaño que los elementos de la etiqueta */
+}
+
+button {
+  /* Este margen adicional representa aproximadamente el mismo espacio que el espacio
+     entre las etiquetas y sus campos de texto */
+  margin-left: .5em;
+}
+</style>
+
+.boton_1{
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Poppins', sans-serif;;
+    font-weight: 300;
+    font-size: 25px;
+    background-color: transparent;
+    border: 0px solid;
+  }
+    .boton_1:hover{
+    opacity: 0.6;
+    text-decoration: none;
+  }
+</style>
+.boton_2{
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Poppins', sans-serif;;
+    font-weight: 300;
+    font-size: 25px;
+    background-color: transparent;
+    border: 0px solid;
+  }
+    .boton_2:hover{
+    opacity: 0.6;
+    text-decoration: none;
+  }
+</style>
+.boton_3{
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Poppins', sans-serif;;
+    font-weight: 300;
+    font-size: 25px;
+    background-color: transparent;
+    border: 0px solid;
+}
+  .boton_3:hover{
+    opacity: 0.6;
+    text-decoration: none;
+  }
+</style>
+}
